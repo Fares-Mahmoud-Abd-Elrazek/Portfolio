@@ -62,7 +62,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/Images/header_bg_2.png") no-repeat center center/cover;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../Images/header_bg_2.png") no-repeat center center/cover;
         color: #2DA8FF;
         overflow: hidden;
         z-index: 1;
