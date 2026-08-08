@@ -32,10 +32,35 @@ reveals.forEach(item => {
 });
 
 
+
+
+
+
+
+emailjs.init("Qy3d9M2ojpUlBbZy1");
+
 const contactForm = document.getElementById("contactForm");
 
-if (contactForm) {
-    contactForm.addEventListener("submit", function(e) {
-        e.preventDefault();
-    });
-}
+contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const templateParams = {
+        from_name: document.getElementById("name").value,
+        from_email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+    };
+
+    emailjs.send(
+            "service_69izi9q",
+            "template_8v182cl",
+            templateParams
+        )
+        .then(function() {
+            alert("Message sent successfully!");
+            contactForm.reset();
+        })
+        .catch(function(error) {
+            console.error(error);
+            alert("Failed to send message.");
+        });
+});
