@@ -236,7 +236,7 @@
         padding: 20px;
         margin-bottom: 20px;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        height: 250px;
+        height: auto;
         color: #2DA8FF;
     }
     
