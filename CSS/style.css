@@ -228,7 +228,7 @@
         background-color: #050213;
         border-bottom: #2DA8FF 2px solid;
     }
-
+    
     .skills-system {
         position: relative;
         isolation: isolate;
@@ -238,7 +238,7 @@
         display: grid;
         place-items: center;
     }
-
+    
     .skills-system__orbit {
         position: absolute;
         inset: 12%;
@@ -247,7 +247,7 @@
         animation: skills-orbit 34s linear infinite;
         z-index: 1;
     }
-
+    
     .skills-system__orbit::before {
         content: "";
         position: absolute;
@@ -259,39 +259,39 @@
         background: #2DA8FF;
         box-shadow: 0 0 14px #2DA8FF;
     }
-
+    
     .skills-system__satellite {
         position: absolute;
         display: block;
         transform: translate(-50%, -50%);
         z-index: 2;
     }
-
+    
     .skills-system__satellite--top {
         top: 0;
         left: 50%;
     }
-
+    
     .skills-system__satellite--upper-right {
         top: 34.5%;
         left: 97.5%;
     }
-
+    
     .skills-system__satellite--lower-right {
         top: 90.5%;
         left: 79.4%;
     }
-
+    
     .skills-system__satellite--lower-left {
         top: 90.5%;
         left: 20.6%;
     }
-
+    
     .skills-system__satellite--upper-left {
         top: 34.5%;
         left: 2.5%;
     }
-
+    
     .skills-system__badge {
         min-width: 88px;
         padding: 8px 10px;
@@ -310,17 +310,17 @@
         animation: skills-counter-orbit 34s linear infinite;
         transition: border-color 0.25s ease, box-shadow 0.25s ease;
     }
-
+    
     .skills-system__badge i {
         color: #2DA8FF;
         font-size: 25px;
     }
-
+    
     .skills-system__badge:hover {
         border-color: #2DA8FF;
         box-shadow: 0 0 22px rgba(45, 168, 255, 0.45);
     }
-
+    
     .skills-system__planet {
         position: relative;
         z-index: 2;
@@ -329,13 +329,11 @@
         display: grid;
         place-items: center;
         border-radius: 50%;
-        background:
-            radial-gradient(ellipse at 27% 22%, rgba(235, 251, 255, 0.95) 0, rgba(129, 224, 255, 0.65) 7%, rgba(79, 180, 255, 0.16) 21%, transparent 37%),
-            radial-gradient(circle at 35% 34%, #70d7ff 0, #348aff 29%, #6543c0 60%, #241044 80%, #0b051c 100%);
+        background: radial-gradient(ellipse at 27% 22%, rgba(235, 251, 255, 0.95) 0, rgba(129, 224, 255, 0.65) 7%, rgba(79, 180, 255, 0.16) 21%, transparent 37%), radial-gradient(circle at 35% 34%, #70d7ff 0, #348aff 29%, #6543c0 60%, #241044 80%, #0b051c 100%);
         box-shadow: inset 8px 8px 18px rgba(235, 251, 255, 0.28), inset -18px -20px 28px rgba(5, 2, 19, 0.82), 0 0 32px rgba(45, 168, 255, 0.45), 0 0 64px rgba(157, 77, 255, 0.25);
         color: #fff;
     }
-
+    
     .skills-system__planet::before {
         content: "";
         position: absolute;
@@ -350,7 +348,7 @@
         transform: translate(-50%, -50%) rotateX(66deg) rotateZ(-24deg);
         pointer-events: none;
     }
-
+    
     .skills-system__planet::after {
         content: "";
         position: absolute;
@@ -360,7 +358,7 @@
         background: radial-gradient(ellipse at 76% 78%, rgba(5, 2, 19, 0.8) 0, rgba(5, 2, 19, 0.25) 38%, transparent 68%);
         pointer-events: none;
     }
-
+    
     .skills-system__planet span {
         position: relative;
         z-index: 3;
@@ -370,79 +368,78 @@
         letter-spacing: 1px;
         text-shadow: 0 2px 8px rgba(5, 2, 19, 0.65);
     }
-
+    
     @keyframes skills-orbit {
         to {
             transform: rotate(360deg);
         }
     }
-
+    
     @keyframes skills-counter-orbit {
         to {
             transform: rotate(-360deg);
         }
     }
-
+    
     @media (max-width: 576px) {
         .skills-system {
             width: min(100%, 340px);
         }
-
         .skills-system__orbit {
             inset: 16%;
         }
     }
-
+    
     #skills .reveal,
     #projects .reveal {
         opacity: 0;
         transform: translateY(40px) scale(0.97);
         transition: opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
     }
-
+    
     #skills .reveal.active,
     #projects .reveal.active {
         opacity: 1;
         transform: translateY(0) scale(1);
     }
-
-    #skills .row > .reveal:nth-child(2) {
+    
+    #skills .row>.reveal:nth-child(2) {
         transition-delay: 0.08s;
     }
-
-    #skills .row > .reveal:nth-child(3) {
+    
+    #skills .row>.reveal:nth-child(3) {
         transition-delay: 0.16s;
     }
-
-    #skills .row > .reveal:nth-child(4) {
+    
+    #skills .row>.reveal:nth-child(4) {
         transition-delay: 0.24s;
     }
-
-    #skills .row > .reveal:nth-child(5) {
+    
+    #skills .row>.reveal:nth-child(5) {
         transition-delay: 0.32s;
     }
-
-    #projects .row > .reveal:nth-child(2) {
+    
+    #projects .row>.reveal:nth-child(2) {
         transition-delay: 0.08s;
     }
-
-    #projects .row > .reveal:nth-child(3) {
+    
+    #projects .row>.reveal:nth-child(3) {
         transition-delay: 0.16s;
     }
-
-    #projects .row > .reveal:nth-child(4) {
+    
+    #projects .row>.reveal:nth-child(4) {
         transition-delay: 0.24s;
     }
-
-    #projects .row > .reveal:nth-child(5) {
+    
+    #projects .row>.reveal:nth-child(5) {
         transition-delay: 0.08s;
     }
-
-    #projects .row > .reveal:nth-child(6) {
+    
+    #projects .row>.reveal:nth-child(6) {
         transition-delay: 0.16s;
     }
-
-    #projects .row > .reveal:nth-child(7) {
+    
+    #projects .row>.reveal:nth-child(7) {
         transition-delay: 0.24s;
     }
     
@@ -462,11 +459,11 @@
         border-color: #2DA8FF;
         box-shadow: 0 12px 28px rgba(157, 77, 255, 0.4), 0 0 18px rgba(45, 168, 255, 0.18);
     }
-
+    
     #skills .card i {
         transition: transform 0.3s ease, color 0.3s ease;
     }
-
+    
     #skills .card:hover i {
         color: #9D4DFF;
         transform: translateY(-4px) scale(1.12);
@@ -485,7 +482,7 @@
         padding: 20px;
         margin-bottom: 20px;
         transition: all 0.3s ease-in-out;
-        height: 100%;
+        height: auto;
         color: #2DA8FF;
         display: flex;
         flex-direction: column;
@@ -501,7 +498,7 @@
     }
     
     #projects .card p {
-        height: 60px;
+        height: auto;
         overflow: hidden;
     }
     
@@ -538,7 +535,7 @@
         color: black !important;
         transition: all 0.3s ease-in-out;
     }
-
+    
     @media (prefers-reduced-motion: reduce) {
         #skills .reveal,
         #projects .reveal {
@@ -546,19 +543,16 @@
             transform: none;
             transition: none;
         }
-
         .skills-system__orbit,
         .skills-system__badge {
             animation: none;
         }
-
         #skills .card,
         #projects .card,
         #skills .card i,
         #projects .card img {
             transition: none;
         }
-
         #skills .card:hover,
         #projects .card:hover,
         #skills .card:hover i,
